@@ -9,6 +9,6 @@ public class P05_kullanicidanEkranlaVeriAlma {
 
 
 
-        JOptionPane.showMessageDialog(null, "Kayıt Başarılı\nOlarak Gerçekleştirildi\n"+isim+" "+soyIsim);
+        JOptionPane.showMessageDialog(null, "Kayıt Başarılı Olarak Gerçekleştirildi\n"+"\n"+isim+" "+soyIsim);
     }
 }
