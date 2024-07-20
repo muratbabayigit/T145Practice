@@ -15,7 +15,8 @@ public class P05_stringManipulation {
         String ikinciKelime=metin.substring(metin.indexOf(" ")+1,metin.lastIndexOf(" "));
         String ucuncuKelime=metin.substring(metin.lastIndexOf(" ")+1);
 
-        System.out.println(ilkKelime.substring(0,1).toUpperCase()+"."+ikinciKelime.substring(0,1).toUpperCase()+"."+ucuncuKelime.substring(0,1).toUpperCase()+".");
+        System.out.println(ilkKelime.substring(0,1).toUpperCase()+"."+ikinciKelime.substring(0,1).toUpperCase()
+                                                                 +"."+ucuncuKelime.substring(0,1).toUpperCase()+".");
 
 
 
