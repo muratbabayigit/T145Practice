@@ -31,6 +31,7 @@ public class P06_methodCreation {
         System.out.println("Lütfen bir metin giriniz");
         String input= scan.nextLine();
         System.out.println("Benzersiz Karakterler: "+benzersizKarakterler(input));
-        scan.close();
+
+
     }
 }
