@@ -2,6 +2,12 @@ import java.util.Scanner;
 
 public class T145_Market {
    static Scanner scan=new Scanner(System.in);
+   static int urunKodu=0;
+   static boolean ekUrun=false;
+   static int urunMiktari=0;
+   static String urunAd;
+   static int urunBirimFiyat=0;
+
     /*
    ====================PROJEMIZ===================================
  ilk programa girildiginde bizi bir menu karsilasin bu secenekler
@@ -37,14 +43,20 @@ public class T145_Market {
                 switch (secim){
                     case 1:
                         sarkuteri();
+                        break;
                     case 2:
                         manav();
+                        break;
                     case 3:
                         market();
+                        break;
                     case 4:
                         fisYazdir();
+                        break;
                     case 5:
                         cikis();
+                        break;
+                    default:
                 }
             }
 
@@ -53,8 +65,36 @@ public class T145_Market {
         }
 
     private static void sarkuteri() {
+
         System.out.println("---- Şarküteri Resyonuna Hoş Geldiniz ----");
-    }
+        System.out.println("==== Ürün Listesindeki ürünleri başında bulunan kod ile sisteme ekleyiniz ====");
+        System.out.println("  Şarküteri Ürün Listesi\n----------------------------");
+        System.out.println("101 - Peynir 135₺\n102 - Süt 32₺\n103 - Yoğurt 160₺\n104 - Zeytin 300₺\n105 - Yumurta 95₺");
+        System.out.print("Ürün kodunu giriniz: ");
+        urunKodu = scan.nextInt();
+        if (!(urunKodu >= 101 && urunKodu <= 105)) {
+            sarkuteri();
+        }
+            while (!ekUrun) {
+
+                if (urunKodu >= 101 && urunKodu <= 105) {
+                    System.out.print("Kaç Paket alacaksınız: ");
+                    urunMiktari = scan.nextInt();
+
+                    switch (urunKodu) {
+                        case 101:
+                            urunAd = "Peynir";
+                            urunBirimFiyat = 135;
+                            System.out.println(urunMiktari + " paket " + urunAd + " fiyatı:" + (urunMiktari * urunBirimFiyat) + "₺'dir");
+                            break;
+
+                    }
+
+                }
+            }
+        }
+
+
 
 
     private static void manav() {
